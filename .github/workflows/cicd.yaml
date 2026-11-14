@@ -109,7 +109,6 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           LANGSMITH_TRACING: ${{ secrets.LANGSMITH_TRACING }}
           LANGSMITH_ENDPOINT: ${{ secrets.LANGSMITH_ENDPOINT }}
           LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
@@ -125,10 +124,6 @@ jobs:
             exit 1
           fi
 
-          if [ -z "$OPENWEATHER_API_KEY" ]; then
-            echo "OPENWEATHER_API_KEY secret is missing."
-            exit 1
-          fi
 
           if [ -z "$LANGSMITH_TRACING" ]; then
             echo "LANGSMITH_TRACING secret is missing."
@@ -169,8 +164,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-
           LANGSMITH_TRACING: ${{ secrets.LANGSMITH_TRACING }}
           LANGSMITH_ENDPOINT: ${{ secrets.LANGSMITH_ENDPOINT }}
           LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
