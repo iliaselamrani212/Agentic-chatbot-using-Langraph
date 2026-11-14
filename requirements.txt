@@ -1,0 +1,20 @@
+# --- Front ---
+streamlit>=1.43          # st.chat_input(accept_file=...) requis
+
+# --- LangGraph / LangChain ---
+langgraph>=0.3           # interrupt / Command (HITL)
+langgraph-checkpoint-sqlite
+langchain-core
+langchain-community      # PyPDFLoader, FAISS
+langchain-text-splitters
+langchain-ollama         # ChatOllama, OllamaEmbeddings
+langchain-google-genai   # importé dans backend.py (non utilisé actuellement)
+langchain-tavily         # TavilySearch
+
+# --- RAG ---
+faiss-cpu
+pypdf                    # requis par PyPDFLoader
+
+# --- Utilitaires ---
+python-dotenv
+requests
